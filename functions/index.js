@@ -14,6 +14,6 @@ main.use("/", app);
 main.use(bodyParser.json());
 main.use(bodyParser.urlencoded({ extended: false }));
 
-app.post("/email", emailValidators, (p, res) => email(req, res));
+app.post("/email", emailValidators, (req, res) => email(req, res));
 
 exports.api = https.onRequest(main);
